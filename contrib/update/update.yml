@@ -42,6 +42,10 @@
         update_cache: yes
         upgrade: yes
         autoremove: yes
+      register: update_upgrade
+      until: update_upgrade is not failed
+      retries: 5
+      delay: 5
 
     - name: install git and pip
       apt:
