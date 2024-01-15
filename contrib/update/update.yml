@@ -14,10 +14,10 @@
       digital_ocean:
         state: active
         command: droplet
-        image_id: ubuntu-18-04-x64
+        image_id: ubuntu-20-04-x64
         name: serenata-update
         region_id: nyc1
-        size_id: s-8vcpu-32gb
+        size_id: s-16vcpu-32gb
         unique_name: yes
         ssh_key_ids:
           - "{{ ssh_public_key.ssh_key.id | int }}"
