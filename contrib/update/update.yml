@@ -47,9 +47,9 @@
       retries: 5
       delay: 5
 
-    - name: install git and pip
+    - name: install package dependencies
       apt:
-        name: git,python3-pip
+        name: git,python3-pip,python3-dev,gfortran,libopenblas-dev,liblapack-dev
 
     - name: clone serenata-de-amor repository
       git:
